@@ -4,7 +4,7 @@ export default function User({className}) {
     const {data:session} = useSession();
     if(session){
         return (
-           <div>
+           <div className={`${className}`}>
              <img onClick={signOut} src={session.user.image} alt="user image" className={`h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1 ${className}`}/>
            </div>
         )
