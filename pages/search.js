@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {useRouter} from "next/router";
 import SearchHeader from "../components/SearchHeader";
+import SearchResults from "../components/SearchResults";
 import Response from "../Response";
 
 export default function search({results}) {
@@ -14,6 +15,7 @@ export default function search({results}) {
         <link rel="icon" href="/favicon.png"/>
     </Head>
     <SearchHeader/>
+    <SearchResults results={results} /> 
     </div>
   )
 }
