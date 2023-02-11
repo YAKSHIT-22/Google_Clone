@@ -13,7 +13,7 @@ export default function signin({ providers }) {
         <link rel="icon" href="/favicon.png"/>
       </Head>
       <Header />
-      <div className="mt-40 ">
+      <div className="w-screen h-[80vh] flex items-center justify-center">
         {Object.values(providers).map((provider) => (
           <div key={provider.name} className="flex flex-col items-center">
             <img
