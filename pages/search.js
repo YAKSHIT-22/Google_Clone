@@ -1,21 +1,27 @@
 import Head from "next/head";
 import {useRouter} from "next/router";
+import ImageResults from "../components/ImageResults";
 import SearchHeader from "../components/SearchHeader";
 import SearchResults from "../components/SearchResults";
 import Response from "../Response";
 
 export default function search({results}) {
   console.log(results);
-    const { query } = useRouter();
+    const router = useRouter();
   return (
     <div>
     <Head>
-    <title>{query.term} - Google Search</title>
+    <title>{router.query.term} - Google Search</title>
         <meta name="description" content="Google clone made using Next.js, tailwindcss" />
         <link rel="icon" href="/favicon.png"/>
     </Head>
     <SearchHeader/>
-    <SearchResults results={results} /> 
+    {router.query.searchType === "images" ? (
+        <ImageResults results={results} />
+      ) : (
+        <SearchResults results={results} />
+      )}
+    
     </div>
   )
 }
