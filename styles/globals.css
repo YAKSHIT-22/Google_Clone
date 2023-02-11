@@ -173,6 +173,7 @@
 	html {
 		scroll-behavior: smooth;
 	}
+
 }
 .scroll-remove::-webkit-scrollbar {
 	display: none;
@@ -180,4 +181,14 @@
 .scroll-remove {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+
+@layer components{
+	.link{
+		@apply hover:underline cursor-pointer
+	}
+	body{
+		@apply font-monts
+	}
 }
