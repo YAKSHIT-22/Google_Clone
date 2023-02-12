@@ -34,9 +34,9 @@ export default function Home() {
         <form className='flex flex-col gap-5 items-center justify-center h-full p-4 sm:p-2 w-screen'>
         <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" width="300" height="100" objectFit='cover' alt="google logo"/>
         <div className="flex items-center justify-center mx-auto max-w-full sm:max-w-[75%] md:max-w-[60%] lg:max-w-[50%] w-full border border-gray-200 rounded-full px-2 py-4 xs:p-4 gap-2">   
-              <SearchIcon className='h-5 text-gray-500' />
-              <input ref={searchInputRef} type="text" className='flex-1 focus:outline-none'/>
-              <MicrophoneIcon className='h-5 text-gray-500'/>
+             <div className="h-5 flex items-center justify-center"><SearchIcon className='h-5 text-gray-500' /></div>
+              <input ref={searchInputRef} type="text" className='w-full focus:outline-none'/>
+              <div className="h-5 flex items-center justify-center"><MicrophoneIcon className='h-5 text-gray-500'/></div>
            </div>
          <div className='flex flex-row items-center justify-center gap-6 text-sm mt-2'>  
         <button onClick={search} className="btn">Google Search</button>
